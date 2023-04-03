@@ -18,12 +18,12 @@ BLUE = (0, 0, 255)
 #fps
 FPS = 60
 #ball maxspeed
-MAX_SPEED = 10
+MAX_SPEED = 30
 
 
 balls = []
 
-# Создание класса для шариков
+# Class ball creation
 class Ball:
     def __init__(self, x, y, radius, color, speed):
         self.x = x
@@ -55,7 +55,7 @@ class Ball:
                     self.y_speed *= -1
                     break
         
-        self.y_speed -= -0.1  
+        self.y_speed += 0.1 
 
     def draw(self):
         # ball draw
